@@ -33,7 +33,7 @@ This project provides a tool for generating and displaying a complete map image 
 
 2. Run the Docker Container:
 
-``docker run -d -p 8000:8000 corekeeper-map-server```
+```docker run -d -p 8000:8000 corekeeper-map-server```
     * Access the map webpage at http://localhost:8000/ (or your server's IP address if running remotely).
 
 ## Configuration:
