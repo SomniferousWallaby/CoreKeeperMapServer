@@ -1,7 +1,7 @@
 # Exaple docker-compose file with core-keeper server
 services:
   core-keeper:
-    container_name: pibbpepper-core-keeper
+    container_name: Core-Keeper-Name
     image: escaping/core-keeper-dedicated
     volumes:
       - /home/games/core_keeper/serverFiles/files:/home/steam/core-keeper-dedicated
