@@ -1,0 +1,22 @@
+# Exaple docker-compose file with core-keeper server
+services:
+  core-keeper:
+    container_name: pibbpepper-core-keeper
+    image: escaping/core-keeper-dedicated
+    volumes:
+      - /home/games/core_keeper/serverFiles/files:/home/steam/core-keeper-dedicated
+      - /home/games/core_keeper/serverFiles/data:/home/steam/core-keeper-data
+    env_file:
+      - ./core.env
+    restart: always
+    stop_grace_period: 2m
+  
+  core-keeper-map:
+    container_name: Core-Keeper-Mapping-Services
+    ports: 
+      - 8000:8000
+    image: corekeeper-map-server
+    volumes:
+    - /home/thomas/games/core_keeper/serverFoles/data/servermaps:/app/server-map-gzip
+
+

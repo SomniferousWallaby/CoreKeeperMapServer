@@ -4,3 +4,4 @@ discordPosting.py
 __pycache__
 readme.md
 *.tar
+example_docker-compose.yaml
