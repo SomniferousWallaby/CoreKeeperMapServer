@@ -3,3 +3,4 @@ discordPosting.py
 .gitignore
 __pycache__
 readme.md
+*.tar
