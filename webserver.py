@@ -20,6 +20,10 @@ class WebHandler(http.server.SimpleHTTPRequestHandler):
             full_image = imageHandling.completeImage(json_data)
             cv2.imwrite('generated_images/map.png', full_image)
 
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
 Handler = WebHandler
